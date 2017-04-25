@@ -1,0 +1,83 @@
+@model FinanceSummarizer.Models.StatementDetails
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StatementDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bank)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bank)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Branch)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Branch)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Account)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Account)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FromDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FromDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableBalance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AvailableBalance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableBalanceDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AvailableBalanceDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LedgerBalance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LedgerBalance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LedgerBalanceDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LedgerBalanceDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

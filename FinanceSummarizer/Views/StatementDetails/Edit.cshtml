@@ -1,0 +1,99 @@
+@model FinanceSummarizer.Models.StatementDetails
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>StatementDetails</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ID" />
+        <div class="form-group">
+            <label asp-for="CreatedDateTime" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CreatedDateTime" class="form-control" />
+                <span asp-validation-for="CreatedDateTime" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Bank" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Bank" class="form-control" />
+                <span asp-validation-for="Bank" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Branch" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Branch" class="form-control" />
+                <span asp-validation-for="Branch" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Account" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Account" class="form-control" />
+                <span asp-validation-for="Account" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FromDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FromDate" class="form-control" />
+                <span asp-validation-for="FromDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ToDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ToDate" class="form-control" />
+                <span asp-validation-for="ToDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="AvailableBalance" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="AvailableBalance" class="form-control" />
+                <span asp-validation-for="AvailableBalance" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="AvailableBalanceDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="AvailableBalanceDate" class="form-control" />
+                <span asp-validation-for="AvailableBalanceDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LedgerBalance" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="LedgerBalance" class="form-control" />
+                <span asp-validation-for="LedgerBalance" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LedgerBalanceDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="LedgerBalanceDate" class="form-control" />
+                <span asp-validation-for="LedgerBalanceDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

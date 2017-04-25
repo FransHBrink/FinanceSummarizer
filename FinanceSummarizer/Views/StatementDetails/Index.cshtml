@@ -1,0 +1,89 @@
+@model IEnumerable<FinanceSummarizer.Models.StatementDetails>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bank)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Branch)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Account)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FromDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ToDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AvailableBalance)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AvailableBalanceDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LedgerBalance)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LedgerBalanceDate)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Branch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableBalanceDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LedgerBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LedgerBalanceDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
