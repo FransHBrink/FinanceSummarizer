@@ -7,70 +7,81 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.StatementDetails.CreatedDateTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StatementDetails.Bank)
-            </th>
+            <th>@Html.DisplayNameFor(model => model.StatementDetails.CreatedDateTime)</th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.CreatedDateTime)
+            </td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.StatementDetails.Bank)</th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.Bank)
+            </td>
+        </tr>
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StatementDetails.Branch)
             </th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.Branch)
+            </td>
+        </tr>
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StatementDetails.Account)
             </th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.Account)
+            </td>
+        </tr>
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StatementDetails.FromDate)
             </th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.FromDate)
+            </td>
+        </tr>
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StatementDetails.ToDate)
             </th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.ToDate)
+            </td>
+        </tr>
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StatementDetails.AvailableBalance)
             </th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.AvailableBalance)
+            </td>
+        </tr>
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StatementDetails.AvailableBalanceDate)
             </th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.AvailableBalanceDate)
+            </td>
+        </tr>
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StatementDetails.LedgerBalance)
             </th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.LedgerBalance)
+            </td>
+        </tr>
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StatementDetails.LedgerBalanceDate)
             </th>
-            <th></th>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.StatementDetails.LedgerBalanceDate)
+            </td>
         </tr>
     </thead>
     <tbody>
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.CreatedDateTime)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.Bank)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.Branch)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.Account)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.FromDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.ToDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.AvailableBalance)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.AvailableBalanceDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.LedgerBalance)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.StatementDetails.LedgerBalanceDate)
-                </td>
-            </tr>
 </table>

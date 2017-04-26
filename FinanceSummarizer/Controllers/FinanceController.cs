@@ -46,7 +46,6 @@ namespace FinanceSummarizer.Controllers
             }
 
             return RedirectToAction("Welcome");
-            //// redirect back to the index action to show the form once again
         }
 
         // 
